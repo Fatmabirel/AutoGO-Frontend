@@ -1,0 +1,74 @@
+h3 {
+  color: #800020; /* Mavi yerine bordo */
+  margin-top: 20px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.group {
+  margin-bottom: 20px;
+  margin-left: 70px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  font-size: 13pt;
+  color: #000; 
+  font-family: "Lora", serif;
+}
+
+li:before {
+  content: "▸"; 
+  position: absolute;
+  left: 0;
+  color: #800020; /* Mavi yerine bordo */
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.list-group-item {
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.container.mt-5 {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.title {
+  margin-top: 20px;
+  text-align: center;
+  color: #800020; /* Mavi yerine bordo */
+  font-weight: bold;
+  font-size: 2.3em;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.title:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #800020; /* Mavi yerine bordo */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.list-group-item {
+  color: #800020; /* Mavi yerine bordo */
+  text-decoration: none; 
+}

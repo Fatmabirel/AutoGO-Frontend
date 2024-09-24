@@ -1,3 +1,18 @@
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let brand of brands">{{ brand.name }}</li>
-</ul>
+<app-basic-layout>
+  <div class="container">
+   <h2 class="title">Markalarımız</h2>
+   <div class="row">
+     <div class="col-4" *ngFor="let key of groupedKeys()">
+       <div class="group">
+         <h3>{{ key }}.</h3>
+         <ul>
+           <li *ngFor="let brand of groupedBrands[key]">
+             {{ brand.name }}
+           </li>
+         </ul>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ </app-basic-layout>

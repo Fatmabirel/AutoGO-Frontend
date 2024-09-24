@@ -1,0 +1,47 @@
+.title {
+    margin-top: 20px;
+    text-align: center;
+    color: #7d2a2a; /* Bordo açık tonu */
+    font-weight: bold;
+    font-size: 2.3em;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .title:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #7d2a2a; /* Bordo açık tonu */
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  .accordion-header button:hover {
+    border: none; /* Hover efektini kaldırır */
+  }
+  
+  .accordion-header button:focus {
+    outline: none; /* Tıklama sonrası görünüm için outline'ı kaldırır */
+    box-shadow: none; /* Tıklama sonrası kutu gölgesini kaldırır */
+    background-color: rgba(125, 42, 42, 0.2); /* Çok açık kırmızı tonu */
+  }
+  
+  .accordion-item {
+    margin-bottom: 13px; /* İsteğe bağlı, aralıkları ayarlar */
+  }
+  .accordion-button {
+    font-size: 20px;
+    color: #7d2a2a; /* Bordo açık tonu */
+  }
+  .accordion-body {
+    border-left: 3px solid #7d2a2a; /* Bordo açık tonu */
+    font-style: italic;
+  }
+  p {
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
