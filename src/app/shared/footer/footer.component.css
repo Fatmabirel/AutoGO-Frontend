@@ -1,0 +1,80 @@
+.bg-blue {
+  background-color: #0066ae;
+}
+
+.text-blue {
+  color: #000;
+}
+.text-darkk {
+  color: #000000; /* Tüm dark metinler siyah olacak */
+}
+
+/* .btn-primary sınıfını özelleştirir */
+.btn-primary {
+  background-color: #fff;
+  color: #000; /* Metin rengi */
+  border: 1px solid #000; /* Kenarlık rengi */
+  padding: 10px 20px; /* İç boşluk */
+  font-size: 1em; /* Yazı boyutu */
+  border-radius: 5px; /* Kenarlık yuvarlaklığı */
+  transition: background-color 0.3s, border-color 0.3s; /* Geçiş efektleri */
+}
+
+/* Hover durumunda stil değişiklikleri */
+.btn-primary:hover {
+  background-color: #ecf0f3; /* Hover arka plan rengi */
+  border-color: #0056a3; /* Hover kenarlık rengi */
+  color: #0056a3; /* Hover metin rengi */
+}
+
+/* Bordo rengi stil tanımları */
+.bg-bordo {
+  background-color: #8B0000; /* Bordo arka plan rengi */
+}
+
+.text-bordo {
+  color: #000000; /* Bordo metin rengi */
+}
+
+/* Bordo renkte buton stili */
+.btn-bordo {
+  background-color: #8B0000; /* Bordo arka plan rengi */
+  color: #000000; /* Siyah metin rengi */
+  border: 1px solid white; /* Kenarlık rengi */
+  padding: 10px 20px; /* İç boşluk */
+  font-size: 1em; /* Yazı boyutu */
+  border-radius: 5px; /* Kenarlık yuvarlaklığı */
+}
+
+/* Bordo buton hover durumunda stil değişiklikleri */
+.btn-bordo:hover {
+  background-color: #ecf0f3; /* Hover arka plan rengi */
+  border-color: #8B0000; /* Hover kenarlık rengi */
+  color: #8B0000; /* Hover metin rengi */
+}
+h5 {
+  color: #000000; /* Başlıklar siyah olacak */
+  border-bottom: 2px solid #000000; /* Başlıkların altında siyah çizgi */
+  padding-bottom: 5px; /* Başlık ile çizgi arasında boşluk */
+}
+
+/* Footer altındaki metin ve simgelerin stili */
+footer p {
+  margin: 0; /* Margin sıfırlama */
+  color: #000000; /* Siyah metin rengi */
+}
+
+.link-body-emphasis {
+  color: #000000; /* Siyah renkli bağlantılar */
+}
+
+.link-body-emphasis:hover {
+  color: #000; /* Hover durumunda daha açık siyah */
+}
+.nav-item {
+  color: #000000; /* Siyah renkli nav item'lar */
+  text-decoration: none; /* Alt çizgi yok */
+}
+.border-top {
+  border-top: 2px solid #000 !important; /* Üst sınır rengi siyah */
+}
