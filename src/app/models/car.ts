@@ -1,8 +1,11 @@
+import { CarImage } from "./carImage";
+
 export class Car{
     id:number;
-    brandId:number;
-    colorId:number;
-    modelYear:number;
+    carName:string;
+    brandName:number;
+    colorName:string;
+    modelYear:string;
     dailyPrice:number;
-    description:string;
+    carImages: CarImage[];
 }
