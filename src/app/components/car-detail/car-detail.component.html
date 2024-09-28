@@ -1,0 +1,35 @@
+<app-basic-layout>
+    <div class="row">
+      <h2 class="title">{{ car.brandName }} {{ car.carName }}</h2>
+      <div class="col-md-12 d-flex justify-content-start align-items-start">
+        <div class="col-md-4" *ngIf="car">
+          <img
+            [src]="car.carImages && car.carImages.length > 0 ? car.carImages[0].imagePath : 'https://via.placeholder.com/180'"
+            class="img-fluid"
+            alt="Car Image"
+            style="max-width: 100%; height: auto;"
+          />
+        </div>
+        <div class="col-md-8" *ngIf="car">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <strong>Marka:</strong> {{ car.brandName }}
+            </li>
+            <li class="list-group-item">
+              <strong>Model:</strong> {{ car.carName }}
+            </li>
+            <li class="list-group-item">
+              <strong>Renk:</strong> {{ car.colorName }}
+            </li>
+            <li class="list-group-item">
+              <strong>Fiyat:</strong> {{ car.dailyPrice }} TL (günlük)
+            </li>
+            <li class="list-group-item">
+              <strong>Model Yılı:</strong> {{ car.modelYear }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </app-basic-layout>
+  

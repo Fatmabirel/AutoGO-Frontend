@@ -62,11 +62,15 @@
         <div class="card-body">
           <ul class="list-group list-group-flush">
             <li class="list-group-item text-center">
-              {{ car.brandName }} {{ car.carName }}
+              <!-- carName kısmını routerLink ile car-detail sayfasına yönlendirme -->
+              <a [routerLink]="['/car-detail', car.carId]" class="car-link">
+                {{ car.brandName }} {{ car.carName }}
+              </a>
             </li>
             <li class="list-group-item text-center">
               Renk : {{ car.colorName }}
             </li>
+           
             <li class="list-group-item text-center">
               {{ car.dailyPrice }} TL (günlük)
             </li>

@@ -10,6 +10,7 @@ import { FilterCarBrandPipe } from '../../pipes/filter-car-brand.pipe';
 import { ColorService } from '../../services/color/color.service';
 import { Color } from '../../models/color';
 import { FilterCarColorPipe } from '../../pipes/filter-car-color.pipe';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-car',
@@ -20,6 +21,7 @@ import { FilterCarColorPipe } from '../../pipes/filter-car-color.pipe';
     FormsModule,
     FilterCarBrandPipe,
     FilterCarColorPipe,
+    RouterModule
   ],
   templateUrl: './car.component.html',
   styleUrl: './car.component.css',
