@@ -1,29 +1,78 @@
 <app-basic-layout>
   <div class="row">
     <h2 class="title">Araçlarımız</h2>
-    <div class="col-md-12 d-flex justify-content-between align-items-center mb-3">
+    <div
+      class="col-md-12 d-flex justify-content-between align-items-center mb-3"
+    >
       <div class="d-flex align-items-center">
         <button class="btn btn-primary mr-2">Marka:</button>
         <div class="form-group mb-0 d-flex align-items-center">
-          <select class="form-control mb-0" id="branchFilter" [(ngModel)]="selectedBranch" (change)="onBranchFilterChange($event)">
+          <select
+            class="form-control mb-0"
+            id="branchFilter"
+            [(ngModel)]="selectedBranch"
+            (change)="onBranchFilterChange($event)"
+          >
             <option value="" selected>Tüm Markalar</option>
-            <option *ngFor="let branch of brands" [value]="branch.name">{{ branch.name }}</option>
+            <option *ngFor="let branch of brands" [value]="branch.name">
+              {{ branch.name }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <button class="btn btn-primary mr-2">Renk:</button>
+        <div class="form-group mb-0 d-flex align-items-center">
+          <select
+            class="form-control mb-0"
+            id="colorFilter"
+            [(ngModel)]="selectedColor"
+            (change)="onColorFilterChange($event)"
+          >
+            <option value="" selected>Tüm Renkler</option>
+            <option *ngFor="let color of colors" [value]="color.name">
+              {{ color.name }}
+            </option>
           </select>
         </div>
       </div>
     </div>
-    
-    <div *ngFor="let car of cars" class="col-md-3">
+
+    <div
+      *ngFor="
+        let car of cars
+          | appFilterCarBrand : selectedBranch
+          | appFilterCarColor : selectedColor
+      "
+      class="col-md-3"
+    >
       <div class="card border-danger mb-4">
         <!-- Eğer her araç için birden fazla resim varsa, ilk resmi göstermek için ngFor kullanıyoruz -->
-        <img *ngIf="car.carImages && car.carImages.length > 0" [src]="car.carImages[0].imagePath" class="card-img-top" alt="Car Image" style="max-height: 150px; max-width: 100%;" />
+        <img
+          [src]="
+            car.carImages && car.carImages.length > 0
+              ? car.carImages[0].imagePath
+              : 'https://via.placeholder.com/180'
+          "
+          class="card-img-top"
+          alt="Car Image"
+          style="max-height: 150px; max-width: 100%"
+        />
 
         <div class="card-body">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item text-center">{{ car.brandName}} {{car.carName}} </li>
-            <li class="list-group-item text-center">Renk : {{car.colorName}}</li>
-            <li class="list-group-item text-center">{{ car.dailyPrice }} TL (günlük)</li>
-            <li class="list-group-item text-center">{{ car.modelYear }} Model</li>
+            <li class="list-group-item text-center">
+              {{ car.brandName }} {{ car.carName }}
+            </li>
+            <li class="list-group-item text-center">
+              Renk : {{ car.colorName }}
+            </li>
+            <li class="list-group-item text-center">
+              {{ car.dailyPrice }} TL (günlük)
+            </li>
+            <li class="list-group-item text-center">
+              {{ car.modelYear }} Model
+            </li>
           </ul>
         </div>
       </div>
