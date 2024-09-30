@@ -1,0 +1,7 @@
+.list-group {
+  margin-left: 10px;
+}
+.rental-section {
+  align-items: flex-end; /* İçeriği sağa yaslamak için */
+  margin-left: auto; /* Otomatik boşluk ile sağa itmek için */
+}

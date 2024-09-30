@@ -1,1 +1,22 @@
-<p>rental works!</p>
+<div class="rental-section">
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>Kiralama Tarihi</strong>
+      <input type="date" [(ngModel)]="selectedRentDate" id="rentDate" />
+    </li>
+    <li class="list-group-item">
+      <strong>Dönüş Tarihi (Opsiyonel):</strong>
+      <input
+        type="date"
+        [(ngModel)]="selectedReturnDate"
+        id="returnDate"
+        class="form-control d-inline"
+        style="width: auto; display: inline"
+      />
+    </li>
+    <br />
+    <button (click)="checkCarAvailability()" class="btn btn-success">
+      Kirala
+    </button>
+  </ul>
+</div>
