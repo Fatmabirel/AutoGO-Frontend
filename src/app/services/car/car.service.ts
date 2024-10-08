@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { ListResponseModel } from '../../models/listResponseModel';
 import { Observable } from 'rxjs';
 import { Car } from '../../models/car';
-import { SingleResponseModel } from '../../models/singleResponseModelt';
+import { SingleResponseModel } from '../../models/singleResponseModel';
 
 @Injectable({
   providedIn: 'root'

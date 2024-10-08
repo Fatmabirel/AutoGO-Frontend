@@ -34,8 +34,8 @@
           <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             ONLİNE REZERVASYON
           </button>
-          <ul class="dropdown-menu" id="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="/login">Üye Girişi</a></li>
+          <ul class="dropdown-menu" id="dropdown-menu" *ngIf="!isLoggedIn">
+            <li><a class="dropdown-item" routerLink="/login" >Üye Girişi</a></li>
             <li><a class="dropdown-item" routerLink="/register">Üye Ol</a></li>
           </ul>
         </div>

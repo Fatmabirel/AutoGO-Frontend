@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ListResponseModel } from '../../models/listResponseModel';
-import { SingleResponseModel } from '../../models/singleResponseModelt';
+import { SingleResponseModel } from '../../models/singleResponseModel';
 import { Rental } from '../../models/rental';
 import { Observable } from 'rxjs';
 
